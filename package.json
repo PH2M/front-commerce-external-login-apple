@@ -1,0 +1,25 @@
+{
+    "name": "front-commerce-external-login-apple",
+    "version": "1.0.0",
+    "description": "Implementation of external login with Apple to your Front-Commerce project",
+    "author": "PH2M",
+    "original-author": {
+        "name": "Bastien Lamamy",
+        "company": "PH2M"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PH2M/front-commerce-external-login-apple.git"
+    },
+    "bugs": {
+        "url": "https://github.com/PH2M/front-commerce-external-login-apple/issues"
+    },
+    "keywords": [
+        "front-commerce",
+        "Front-Commerce External login Apple"
+    ],
+    "dependencies": {
+        "jsonwebtoken": "^8.5.1",
+        "passport-apple": "^2.0.2"
+    }
+}
