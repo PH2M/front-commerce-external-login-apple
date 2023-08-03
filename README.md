@@ -2,7 +2,7 @@ Front-Commerce external login Apple
 -------
 Implement the external login with Apple your Front-Commerce project using [passport-apple](https://link-url-here.org)https://www.npmjs.com/package/passport-apple and following [Front-Commerce documentation](https://developers.front-commerce.com/docs/2.x/advanced/features/external-logins/advanced#creating-your-own-provider)
 
-![Latest version](https://img.shields.io/badge/latest-v1.0.0-green.svg)
+![Latest version](https://img.shields.io/badge/latest-v1.1.0-green.svg)
 
 Supported Version
 ------------
@@ -12,7 +12,7 @@ Installation & Configuration
 ------------
 1. Install the latest stable version for the module
 ```
-npm install ph2m/front-commerce-external-login-apple#1.0.0
+npm install ph2m/front-commerce-external-login-apple#1.1.0
 ```
 2. Generate your Apple credential for Apple auth feature: https://github.com/ananay/apple-auth/blob/master/SETUP.md#configuring-the-library
 3. Add your own configuration on the `.env` file
@@ -25,17 +25,12 @@ npm install ph2m/front-commerce-external-login-apple#1.0.0
 ```
 4. Create `.externalLoginAppleAuthKey.p8` file in your project root directory and past inside content of your `AuthKey.p8`
 5. Load the module on `.front-commerce.js` file
+Is important to load `./node_modules/front-commerce-external-login-apple` module before `./node_modules/front-commerce/modules/auth-external-login`
 ```
  modules: [
     ...
     "./node_modules/front-commerce-external-login-apple",
-  ],
-  serverModules: [
-    ...
-    {
-      name: "ExternalLoginApple",
-      path: "./node_modules/front-commerce-external-login-apple/server/modules/auth-external-login",
-    },
+    //"./node_modules/front-commerce/modules/auth-external-login",
   ],
   webModules: [
     ...
